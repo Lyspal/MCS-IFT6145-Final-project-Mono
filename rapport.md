@@ -1,4 +1,4 @@
-# Apprendre la stéréo à partir d'une seule image - Projet final
+# Apprendre la stéréo à partir d'images seules - Projet final
 
 ## Notre projet
 

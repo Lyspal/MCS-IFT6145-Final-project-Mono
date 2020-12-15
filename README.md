@@ -38,3 +38,12 @@ L'article implémenté:
  booktitle = {European Conference on Computer Vision ({ECCV})},
  year = {2020}
 }
+
+Pour le modèle MiDaS :
+
+@article{Ranftl2020,
+ author    = {Ren\'{e} Ranftl and Katrin Lasinger and David Hafner and Konrad Schindler and Vladlen Koltun},
+ title     = {Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer},
+ journal   = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+ year      = {2020},
+}
