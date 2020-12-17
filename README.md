@@ -74,3 +74,18 @@ Pour le dataset SceneFlow :
   note      = "arXiv:1512.02134",
   url       = "http://lmb.informatik.uni-freiburg.de/Publications/2016/MIFDB16"
 }
+
+Pour le dataset KITTI 2015:
+
+@ARTICLE{Menze2018JPRS,
+  author = {Moritz Menze and Christian Heipke and Andreas Geiger},
+  title = {Object Scene Flow},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing (JPRS)},
+  year = {2018}
+}
+@INPROCEEDINGS{Menze2015ISA,
+  author = {Moritz Menze and Christian Heipke and Andreas Geiger},
+  title = {Joint 3D Estimation of Vehicles and Scene Flow},
+  booktitle = {ISPRS Workshop on Image Sequence Analysis (ISA)},
+  year = {2015}
+}

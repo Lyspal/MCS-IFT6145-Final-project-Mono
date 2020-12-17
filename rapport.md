@@ -37,12 +37,16 @@ EPE = end-point error = $||V_{est} - V_{gt}||$
 
 Thresholded error rate = the % of pixels with predicted disparity more than $\tau$ pixels from the ground truth: > 3px
 
+On roule d'abord un modèle PSMNet préentraîné avec SceneFlow sur KITTI.
+
+On entraîne ensuite PSMNet avec les images monoculaires de COCO (plus petit ensemble d'images que dans l'article), puis on teste sur KITTI.
+
 ### Les outils
 
 Datasets:
 
-- COCO pour entrainer
-- SINTEL pour tester
+- COCO pour entrainer avec images mono
+- KITTI 2015 pour tester
 
 Réseaux:
 
