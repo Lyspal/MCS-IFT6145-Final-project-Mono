@@ -22,12 +22,20 @@ La solution
 
 1. Estimer la profondeur avec un réseau préentraîné.
 2. Convertir la depth map en disparity map.
-   1. Corriger les occlusions
-   2. Corriger les collisions
+   1. Depth map sharpening
+   2. Corriger les occlusions
+   3. Corriger les collisions
 3. Générer l'image droite.
    1. Forward warping.
    2. Background filling.
 4. Entraîner le réseau de correspondance stéréo avec l'image original et l'image générée comme paire.
+5. Tester
+
+### Tests
+
+EPE = end-point error = $||V_{est} - V_{gt}||$
+
+Thresholded error rate = the % of pixels with predicted disparity more than $\tau$ pixels from the ground truth: > 3px
 
 ### Les outils
 
@@ -39,10 +47,14 @@ Datasets:
 Réseaux:
 
 - MiDaS entraîné pour estimer la profondeur
-- GANet ou iResnet pour la correspondance stereo
+- PSMNet pour la correspondance stereo
 
 ### Difficultés rencontrées
 
 ## Résultats
+
+Comparaison entre :
+- SceneFlow pre-trained, test on KITTI
+- COCO trained + mono, test on KITTI
 
 ### Problèmes connus et améliorations à apporter
