@@ -1,6 +1,6 @@
 # author: Sylvain Laporte
 # date: 2020-12-22
-# program: tests.py
+# program: validation.py
 # object: Fonctions de tests pour valider les résultats
 
 import numpy as np
