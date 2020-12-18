@@ -46,6 +46,7 @@ On entraîne ensuite PSMNet avec les images monoculaires de COCO (plus petit ens
 Datasets:
 
 - COCO pour entrainer avec images mono
+  - Installation https://medium.com/howtoai/pytorch-torchvision-coco-dataset-b7f5e8cad82
 - KITTI 2015 pour tester
 
 Réseaux:
@@ -58,6 +59,7 @@ Réseaux:
 ## Résultats
 
 Comparaison entre :
+
 - SceneFlow pre-trained, test on KITTI
 - COCO trained + mono, test on KITTI
 
