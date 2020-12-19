@@ -56,6 +56,12 @@ Réseaux:
 
 ### Difficultés rencontrées
 
+Bugs dans le code de PSMNet
+
+- mauvais import de `submodule`
+- mauvais type `maxdisp`
+- mauvaise indentation
+
 ## Résultats
 
 Comparaison entre :
