@@ -18,16 +18,18 @@ def compute_TER(predicted_disp, ground_truth):
     diff = np.abs(predicted_disp - ground_truth)
     return diff[np.where(diff > tau)].size / nb_pixels * 100
 
-# Tests
+if __name__ == "__main__":
 
-arr1 = np.arange(8)
-# arr2 = np.array([5, 5, 2, 9, 5, 11, 12, 8])
-arr2 = arr1 + np.random.randint(-1, 2, 8)
+    # Tests
 
-tensor1 = arr1.reshape(2, 2, 2)
-tensor2 = arr2.reshape(2, 2, 2)
+    arr1 = np.arange(8)
+    # arr2 = np.array([5, 5, 2, 9, 5, 11, 12, 8])
+    arr2 = arr1 + np.random.randint(-1, 2, 8)
 
-print(tensor1)
-print(tensor2)
-print(compute_EPE(tensor1, tensor2))
-print(compute_TER(tensor1, tensor2))
+    tensor1 = arr1.reshape(2, 2, 2)
+    tensor2 = arr2.reshape(2, 2, 2)
+
+    print(tensor1)
+    print(tensor2)
+    print(compute_EPE(tensor1, tensor2))
+    print(compute_TER(tensor1, tensor2))
