@@ -7,6 +7,15 @@ import numpy as np
 from numpy.linalg import norm
 
 def compute_EPE(predicted_disp, ground_truth):
+    """[summary]
+
+    Args:
+        predicted_disp ([type]): [description]
+        ground_truth ([type]): [description]
+
+    Returns:
+        [type]: [description]
+    """
     return np.mean(norm(predicted_disp - ground_truth, ord="fro", axis=(1, 2)))
 
 def compute_TER(predicted_disp, ground_truth):

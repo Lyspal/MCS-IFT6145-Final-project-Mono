@@ -54,6 +54,12 @@ Réseaux:
 - MiDaS entraîné pour estimer la profondeur
 - PSMNet pour la correspondance stereo
 
+### Générer les paires stéréo depuis les images mono
+
+Problèmes
+
+- Les images de COCO sont de taille différentes.
+
 ### Difficultés rencontrées
 
 Bugs dans le code de PSMNet
