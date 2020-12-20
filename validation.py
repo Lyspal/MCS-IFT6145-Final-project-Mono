@@ -7,15 +7,6 @@ import numpy as np
 from numpy.linalg import norm
 
 def compute_EPE(predicted_disp, ground_truth):
-    """[summary]
-
-    Args:
-        predicted_disp ([type]): [description]
-        ground_truth ([type]): [description]
-
-    Returns:
-        [type]: [description]
-    """
     return np.mean(norm(predicted_disp - ground_truth, ord="fro", axis=(1, 2)))
 
 def compute_TER(predicted_disp, ground_truth):
@@ -26,19 +17,3 @@ def compute_TER(predicted_disp, ground_truth):
 
     diff = np.abs(predicted_disp - ground_truth)
     return diff[np.where(diff > tau)].size / nb_pixels * 100
-
-if __name__ == "__main__":
-
-    # Tests
-
-    arr1 = np.arange(8)
-    # arr2 = np.array([5, 5, 2, 9, 5, 11, 12, 8])
-    arr2 = arr1 + np.random.randint(-1, 2, 8)
-
-    tensor1 = arr1.reshape(2, 2, 2)
-    tensor2 = arr2.reshape(2, 2, 2)
-
-    print(tensor1)
-    print(tensor2)
-    print(compute_EPE(tensor1, tensor2))
-    print(compute_TER(tensor1, tensor2))
