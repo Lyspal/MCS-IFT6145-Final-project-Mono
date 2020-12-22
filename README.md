@@ -6,22 +6,47 @@ Auteur: Sylvain Laporte
 Matricule: C3874
 
 Date de remise: 2020-12-22  
-Date de présentation: ???
+Date de présentation: 2020-12-22 12h00
 
 ## À propos de ce projet
 
 Ce projet implémente l'article "Learning Stereo from Single Images", arXiv:2008.01484v2 [cs.CV].
 
+Un rapport est disponible au format PDF : `rapport.py`
+
+Les notebooks et fichiers de code sont également annotés.
+
 ## Contenu
 
+Le présent répertoire contient les éléments suivants :
 
+- `M2S_results/` : contient les images obtenues de la génération de paires stéréo.
+- `models/` : contient une copie du répertoire de l'implémentation officielle du modèle PSMNet à laquelle nous avons appliqué les correctifs nécessaires.
+- `baseline_test_PSMNet_colab.ipynb` : notebook Jupyter/Colab utilisé pour effectuer le test de base pour la comparaison de notre implémentation. Voir ce notebook et le rapport pour plus de détails.
+- `generate_training_pairs_colab.ipynb` : notebook Jupyter/Colab utilisé pour générer les paires stéréo selon notre implémentation. Voir ce notebook et le rapport pour plus de détails.
+- `mono2stereo.py` : contient le code de notre implémentation de l'article.
+- `validation.py` : contient les fonctions de comparaison pour les tests.
+- `rapport.pdf` : le rapport de notre projet.
+
+NOTE : pour une exécution correcte des notebooks, les fichiers `.py` doivent être importées dans la machine virtuelle Colab.
 
 ## Prérequis
 
-Les librairires suivantes ont éeé utilisées:
+Les librairires suivantes ont été utilisées :
 
-- `pytorch`: pour la construction et l'entraînement des réseaux.
-- d
+- `PyTorch` : pour la construction et l'entraînement des réseaux.
+- `openCV` : pour l'I/O des images (utilisée car déjà utilisé par le code tiers).
+- `Matplotlib` : pour l'I/O des images.
+
+Les modèles pré-entraînés suivants ont été utilisés :
+
+- MiDaS : pour la génération de depth maps ([version incluse avec PyTorch](https://pytorch.org/hub/intelisl_midas_v2/)).
+- PSMNet : pour la correspondance stéréo ([version officielle](https://github.com/JiaRenChang/PSMNet))
+
+Les datasets suivants ont été utilisés :
+
+- [COCO 2017](https://cocodataset.org/#captions-2015) : pour les images mono (le même utilisé par les auteurs de l'article).
+- [KITTI 2015](http://www.cvlibs.net/datasets/kitti/) : pour les tests sur PSMNet (le même utilisé par les auteurs de l'article).
 
 ## Crédits
 
@@ -40,6 +65,10 @@ L'article implémenté:
  booktitle = {European Conference on Computer Vision ({ECCV})},
  year = {2020}
 }
+
+### Autres références
+
+Zwerman, S., & Okun, J. (Eds.). (2020). The VES Handbook of Visual Effects: Industry Standard VFX Practices and Procedures (3nd ed.). Routledge.
 
 ### Modèles
 
