@@ -14,10 +14,10 @@ class Mono2Stereo():
     """
 
     def __init__(self, use_large_model=True):
-        """Télécharge et initialize le modèle MiDaS sur le GPU.
+        """Télécharge et initialise le modèle MiDaS sur le GPU.
 
         Args:
-            use_large_model (bool, optional): Selectionne le modèle large. Defaults to True.
+            use_large_model (bool, optional): Selectionne le modèle large. Par défaut: True.
         """
         # Télécharger le modèle MiDaS
         if use_large_model:
@@ -70,6 +70,11 @@ class Mono2Stereo():
 
             # Calcule la vue de droite
             right_image = self.__compute_right_view(image, D_tilde, d_max)
+
+            # Crop images
+            image = image[:, -d_max, :]
+            right_image = right_image[:, -d_max, :]
+            D_tilde = D_tilde[:, -d_max, :]
 
             results.append((image, right_image, D_tilde))
         
