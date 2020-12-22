@@ -72,9 +72,9 @@ class Mono2Stereo():
             right_image = self.__compute_right_view(image, D_tilde, d_max)
 
             # Crop images
-            image = image[:, -d_max, :]
-            right_image = right_image[:, -d_max, :]
-            D_tilde = D_tilde[:, -d_max, :]
+            image = image[:, :-d_max, :]
+            right_image = right_image[:, :-d_max, :]
+            D_tilde = D_tilde[:, :-d_max]
 
             results.append((image, right_image, D_tilde))
         
