@@ -3,7 +3,6 @@
 Projet final sur la stéréoscopie à partir d'une seule image pour le cours IFT6145 - Vision tridimensionnelle.
 
 Auteur: Sylvain Laporte  
-Matricule: C3874
 
 Date de remise: 2020-12-22  
 Date de présentation: 2020-12-22 12h00
